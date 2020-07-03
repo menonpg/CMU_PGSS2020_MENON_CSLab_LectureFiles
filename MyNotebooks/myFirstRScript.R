@@ -11,6 +11,6 @@ print(summary(myData))
 write.csv(myData, "timeSeries_COVID19_Chicago.csv")
 
 # Plot the data as a time series using XTS
-library(xts)
+library(xts)   #install using # install.packages("xts")
 myDataXTS <- as.xts(myData[,-c(3)], order.by=myData$Date)
 plot(myDataXTS, main="Chicago cases and deaths relating to COVID19")
