@@ -16,6 +16,7 @@ myDataXTS <- as.xts(myData[,-c(3)], order.by=myData$Date)
 plot(myDataXTS, main="Chicago cases and deaths relating to COVID19")
 
 # Repeat the plot using Plot_ly for an interactive plot
+#install.packages("plotly", dependencies = T)
 library(plotly)
 p <- plot_ly(myData, x = ~Date, y = ~Cases, type = 'scatter', mode = 'lines') %>% 
   add_trace( x = ~Date, y = ~Deaths, type = 'scatter', mode = 'lines') %>% 
