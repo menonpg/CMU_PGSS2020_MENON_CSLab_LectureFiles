@@ -14,3 +14,13 @@ write.csv(myData, "timeSeries_COVID19_Chicago.csv")
 library(xts)   #install using # install.packages("xts")
 myDataXTS <- as.xts(myData[,-c(3)], order.by=myData$Date)
 plot(myDataXTS, main="Chicago cases and deaths relating to COVID19")
+
+# Repeat the plot using Plot_ly for an interactive plot
+library(plotly)
+p <- plot_ly(myData, x = ~Date, y = ~Cases, type = 'scatter', mode = 'lines') %>% 
+  add_trace( x = ~Date, y = ~Deaths, type = 'scatter', mode = 'lines') %>% 
+  layout(title = "Cases and Deaths in Chicago owing to COVID19",
+         xaxis = list(title = "Date"),
+         yaxis = list (title = "Cases / Deaths"))
+print(p)
+
