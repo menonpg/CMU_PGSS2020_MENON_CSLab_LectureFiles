@@ -10,6 +10,7 @@ population <- population[[1]]
 population <- population[-NROW(population), ]
 
 
+library(stringr)
 # Cast the data types of the columns to numeric by removing special characters that may have been scraped in 
 population$CASES1 <- as.numeric(str_replace_all(population$CASES1,",", ""))
 population$DEATHS <- as.numeric(str_replace_all(population$DEATHS,",", ""))
