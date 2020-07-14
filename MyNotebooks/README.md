@@ -15,4 +15,8 @@
 * ReadCrowdSourcedData_fromGoogleSheets.ipynb was a demonstration of how to read data into pandas from a crowdsourced google sheet:
 [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/menonpg/pgss2020_CSLab_lecture2_temp/blob/master/MyNotebooks/ReadCrowdSourcedData_fromGoogleSheets.ipynb)
 
+* ColorAnalysis_ClassificationOfPurple.ipynb was a demonstration of how to read data into pandas from a crowdsourced google sheet and classify the color Purple using linear as well as non-linear (kNN) classification models:
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/menonpg/pgss2020_CSLab_lecture2_temp/blob/master/MyNotebooks/ColorAnalysis_ClassificationOfPurple.ipynb)
+
+
 
