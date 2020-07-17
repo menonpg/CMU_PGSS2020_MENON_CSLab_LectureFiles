@@ -18,5 +18,8 @@
 * ColorAnalysis_ClassificationOfPurple.ipynb was a demonstration of how to read data into pandas from a crowdsourced google sheet and classify the color Purple using linear as well as non-linear (kNN) classification models:
 [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/menonpg/pgss2020_CSLab_lecture2_temp/blob/master/MyNotebooks/ColorAnalysis_ClassificationOfPurple.ipynb)
 
+* LoadTrainedMaskDetector_python_Keras.ipynb was a demonstration of how to load a mobilenet model trained using Google's Teachable Machine service, exported as a keras model, and test it on an uploaded image as well as a web-cam capture image
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/menonpg/pgss2020_CSLab_lecture2_temp/blob/master/MyNotebooks/LoadTrainedMaskDetector_python_Keras.ipynb)
+
 
 
