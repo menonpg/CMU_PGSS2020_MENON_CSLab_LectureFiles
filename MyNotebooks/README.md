@@ -1,4 +1,4 @@
-# This folder contains code:
+# This folder contains the following Python code with links to open in Google Colab, in addition to R scripts (not listed below): 
 
 * myFirstScript.ipynb was a demonstration of how to create a notebook on Google Colab and how to connect the notebook's filesystem to Google Drive. 
 [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/menonpg/pgss2020_CSLab_lecture2_temp/blob/master/MyNotebooks/myFirstScript.ipynb)
@@ -20,6 +20,9 @@
 
 * LoadTrainedMaskDetector_python_Keras.ipynb was a demonstration of how to load a mobilenet model trained using Google's Teachable Machine service, exported as a keras model, and test it on an uploaded image as well as a web-cam capture image
 [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/menonpg/pgss2020_CSLab_lecture2_temp/blob/master/MyNotebooks/LoadTrainedMaskDetector_python_Keras.ipynb)
+
+* MyFirstNN_IrisClassification.ipynb was a demonstration of how to load train a sequential neural network to classify a multinomial response variable, along with some exploration of neural network designs that avert overfitting and improve sensitivity of the model to incremental amounts of training data:  
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/menonpg/pgss2020_CSLab_lecture2_temp/blob/master/MyNotebooks/MyFirstNN_IrisClassification.ipynb)
 
 
 
