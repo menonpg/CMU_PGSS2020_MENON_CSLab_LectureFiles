@@ -18,8 +18,7 @@ plot(myData_XTS[,-c(5)])  # eliminate the volume column from the XTS plot
 
 # Lets download a series of time series data for a list of stock tickers
 syms = c("MSFT", "AMZN", "TSLA", "X")
-
-finalDF <- c()
+finalDF1 <- c()
 
 for (sym in syms) {
   myData <- fetchSeries(function_nm = "time_series_daily", 
@@ -32,18 +31,43 @@ for (sym in syms) {
   
   colnames(myData_XTS) <- c("Open", "High", "Low", "Close", "Volume")
   
-  finalDF <- rbind(finalDF, data.frame(TICKER=sym, DATE = rownames(as.data.frame(tail(myData_XTS,1))),
-                                       as.data.frame(tail(myData_XTS,1))))
-  
-  # print(finalDF)
+  finalDF <- data.frame(TICKER=sym, DATE = rownames(as.data.frame(tail(myData_XTS,1))),
+                        as.data.frame(tail(myData_XTS,1)))
+    
+  # Bollinger Bands
+  bbands <- BBands( myData_XTS[,c("High","Low","Close")] )
+  finalDF <- cbind(finalDF, bbands = as.data.frame(tail(bbands, 1)))
 
+  # Directional Movement Index
+  adx <- ADX(myData_XTS[,c("High","Low","Close")])
+  finalDF <- cbind(finalDF, adx = as.data.frame(tail(adx, 1)))
+  
+  # Moving Averages
+  ema <- EMA(myData_XTS[,"Close"], n=50)
+  finalDF <- cbind(finalDF, ema = as.data.frame(tail(ema, 1)))
+  
+  sma <- SMA(myData_XTS[,"Close"], n=20)
+  finalDF <- cbind(finalDF, sma = as.data.frame(tail(sma, 1)))
+  
+  # MACD
+  macd <- MACD( myData_XTS[,"Close"] )
+  finalDF <- cbind(finalDF, macd = as.data.frame(tail(macd, 1)))
+  
+  # RSI
+  rsi <- RSI(myData_XTS[,"Close"])
+  finalDF <- cbind(finalDF, rsi = as.data.frame(tail(rsi, 1)))
+  
+  # Stochastics
+  stochOsc <- stoch(myData_XTS[,c("High","Low","Close")])
+  finalDF <- cbind(finalDF, stochOsc = as.data.frame(tail(stochOsc, 1)))
+  
+  
+  finalDF1 <- rbind(finalDF1, finalDF) 
+  
 }
 
-rownames(finalDF) <- seq(1, NROW(finalDF), 1)
-print(finalDF)
-
-
-
+rownames(finalDF1) <- seq(1, NROW(finalDF1), 1)
+print(finalDF1)
 
 
 # Create a trading rule based on Bollinger bands
