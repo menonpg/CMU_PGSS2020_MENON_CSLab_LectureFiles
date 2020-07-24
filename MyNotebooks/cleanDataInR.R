@@ -11,3 +11,11 @@ library(dplyr)
 DataFrameOfCarData_toProcessinR <- DataFrameOfCarData_toProcessinR %>% mutate_if(is.character, as.factor)
 
 write.csv(DataFrameOfCarData_toProcessinR, file="DataFrameOfCarData_toProcessedinR.csv")
+
+# Perform a visual comparison of two categories of DriveTrain, in term sof MSRP, using a boxplot 
+boxplot(DataFrameOfCarData_toProcessinR$MSRP[which(DataFrameOfCarData_toProcessinR$Drivetrain %in% "AWD")], 
+        DataFrameOfCarData_toProcessinR$MSRP[which(DataFrameOfCarData_toProcessinR$Drivetrain %in% "FWD")],
+        names = c("AWD", "RWD"))
+plot(density(na.omit(DataFrameOfCarData_toProcessinR$MSRP[which(DataFrameOfCarData_toProcessinR$Drivetrain %in% "AWD")])))
+lines(density(na.omit(DataFrameOfCarData_toProcessinR$MSRP[which(DataFrameOfCarData_toProcessinR$Drivetrain %in% "FWD")])), col= "red")
+
