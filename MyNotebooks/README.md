@@ -29,6 +29,11 @@
 * CarDataAnalysis_01.ipynb was a demonstration of analyze unstructured text data, tabulate it, visualize it and analyze it, reading filenames of cars from images acquired in https://drive.google.com/open?id=1TQQuT60bddyeGBVfwNOk6nxYavxQdZJD:  
 [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/menonpg/CMU_PGSS2020_MENON_CSLab_LectureFiles/blob/master/MyNotebooks/CarDataAnalysis_01.ipynb)
 
+* WorkingWithTextData_01.ipynb was a demonstration of a poor-man's document parser that extracts and weights keywords using the TF-IDF in order to establish context of a page o of a document that is read in from a PDF.
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/menonpg/CMU_PGSS2020_MENON_CSLab_LectureFiles/blob/master/MyNotebooks/WorkingWithTextData_01.ipynb)
+
+
+
 
 
 
